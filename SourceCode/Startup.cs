@@ -16,11 +16,11 @@ namespace Lab4_Cs
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = @"Server=tcp:cs-server666.database.windows.net,1433;Initial Catalog=Lab6;Persist Security Info=False;User ID=alvin;Password=Jdx0316.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            var connection = @"covered with moasic";
             services.AddDbContext<Assigment1DbContext>(options => options.UseSqlServer(connection));
 
-            var blobConnection = @"DefaultEndpointsProtocol=https;AccountName=blog666;AccountKey=YiX8gAUYj/cOfwnXQXfUCUULfNgMrcm9I1mpJhui/WZji47li8XlbkzmzlSLZkM51OiQYAt5Y1j7AG09/VJp0g==;EndpointSuffix=core.windows.net";
-            services.AddSingleton(new BlobServiceClient(blobConnection));
+//             var blobConnection = @"covered with moasic";
+//             services.AddSingleton(new BlobServiceClient(blobConnection));
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddMemoryCache();
