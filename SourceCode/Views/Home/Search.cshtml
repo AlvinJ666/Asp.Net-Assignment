@@ -1,0 +1,44 @@
+@model Lab4_Cs.Models.BlogPost
+@using Microsoft.AspNetCore.Http;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Search";
+}
+
+
+
+
+<h1>Search A Blog</h1>
+
+<html>
+
+<body>
+    <div class="page-header">
+    </div>
+    <form asp-controller="Home" asp-action="showSearchResult">
+        <div class="form-group">
+            <div class="col-sm-4">
+                <select class="form-control" name="pre">
+                    <option>Search by</option>
+                    <option>title</option>
+                    <option>content</option>
+                </select>
+            </div>
+            <br />
+            <div class="col-sm-8">
+                <input class="form-control" name="value" placeholder="characters to search" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-8">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </div>
+        <div>
+            <a asp-action="Index">Back to Posts Home</a>
+        </div>
+    </form>
+
+</body>
+
+</html>
