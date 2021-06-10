@@ -14,12 +14,12 @@ namespace MVCCoreAndEF.Controllers
     public class HomeController : Controller
     {
         private readonly Assigment1DbContext _Assign1Context;
-        private readonly BlobServiceClient _blobServiceClient;
+        //private readonly BlobServiceClient _blobServiceClient;
 
-        public HomeController(Assigment1DbContext context, BlobServiceClient blobServiceClient)
+        public HomeController(Assigment1DbContext context)//, BlobServiceClient blobServiceClient)
         {
             _Assign1Context = context;
-            _blobServiceClient = blobServiceClient;
+            //_blobServiceClient = blobServiceClient;
         }
 
 
