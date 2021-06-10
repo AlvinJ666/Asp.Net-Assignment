@@ -113,15 +113,15 @@ namespace MVCCoreAndEF.Controllers
         {
             var deletePosted = (from b in _Assign1Context.BlogPosts where b.BlogPostId == id select b).FirstOrDefault();
             var deleteComment = (from item in _Assign1Context.Comments where item.BlogPostId == id select item).ToList();
-            var deletePhoto = (from photo in _Assign1Context.Photos where photo.BlogPostId == id select photo).ToList();
+//             var deletePhoto = (from photo in _Assign1Context.Photos where photo.BlogPostId == id select photo).ToList();
             foreach (Comment c in deleteComment)
             {
                 _Assign1Context.Comments.Remove(c);
             }
-            foreach (Photo p in deletePhoto)
-            {
-                _Assign1Context.Photos.Remove(p);
-            }
+//             foreach (Photo p in deletePhoto)
+//             {
+//                 _Assign1Context.Photos.Remove(p);
+//             }
             _Assign1Context.BlogPosts.Remove(deletePosted);
             _Assign1Context.SaveChanges();
             return RedirectToAction("Index", new { notification = "Successfully delete the blog!!" });
