@@ -18,7 +18,7 @@ namespace Lab4_Cs.Models
         public DbSet<Lab4_Cs.Models.BlogPost> BlogPosts { get; set; }
         public DbSet<Lab4_Cs.Models.Comment> Comments { get; set; }
         public DbSet<Lab4_Cs.Models.User> Users { get; set; }
-        public DbSet<Lab4_Cs.Models.Photo> Photos { get; set; }
+       // public DbSet<Lab4_Cs.Models.Photo> Photos { get; set; }
     }
 
 }
