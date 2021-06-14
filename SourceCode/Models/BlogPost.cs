@@ -50,10 +50,10 @@ namespace Lab4_Cs.Models
             get;
             set;
         }
-        public List<Photo> photo
-        {
-            get;
-            set;
-        }
+//         public List<Photo> photo
+//         {
+//             get;
+//             set;
+//         }
     }
 }
