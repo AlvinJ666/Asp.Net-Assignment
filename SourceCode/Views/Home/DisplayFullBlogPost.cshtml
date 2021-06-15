@@ -27,28 +27,6 @@
         </div>
     </div>
 
-    @*<h4>Attached Photos</h4>
-
-        @{
-            <div class="row">
-
-                @foreach (var items in Model.photo)
-                {
-                    if (items.Url.Substring(items.Url.Length - 3, 3).Equals("mp4") || items.Url.Substring(items.Url.Length - 4, 4).Equals("webm"))
-                    {
-                        continue;
-                    }
-
-                    <div class="ig" style="text-align: center; margin:0 auto; display:inline-block;">
-                        <figure>
-                            <img class="rounded" style="background-color:LightGrey; border: 1px solid DarkGrey; padding:10px; margin-bottom:10px; margin-top:10px;" src="@items.Url" />
-                            <figcaption>@items.fileName</figcaption>
-                        </figure>
-                    </div>
-                }
-
-            </div>
-         }*@
         @*display comments*@
         <div class="panel panel-default">
             <div class="panel-heading">Comments</div>
