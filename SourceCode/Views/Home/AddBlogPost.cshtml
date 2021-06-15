@@ -1,11 +1,9 @@
-﻿@model Lab4_Cs.Models.BlogPost
+@model Lab4_Cs.Models.BlogPost
 @using Microsoft.AspNetCore.Http;
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewData["Title"] = "AddBlogPost";
 }
-
-
 
 
 <h1>AddBlog</h1>
@@ -14,29 +12,32 @@
 
 <body>
     <div class="page-header">
-        <br /><h4>Add Blog Post</h4>
+        @*header of adding blog post page*@
+        <br/><h4>Add Blog Post</h4>
     </div>
+    @*call AddPosted function in home controller to perform adding, method type is post*@
     <form method="post" asp-controller="Home" asp-action="AddPosted">
         <div class="form-group">
             <label for="title">Blog Post Title</label>
             <div class="col-sm-8">
+                @*add blog title*@
                 <input class="form-control" id="title" name="Title" asp-for="Title" placeholder="Blog Title" required>
             </div>
-
         </div>
         <div class="form-group">
             <label for="content">Blog Post Content</label>
             <div class="col-sm-8">
+                @*add blog content*@
                 <textarea class="form-control" id="content" rows="20" maxlength="4000" asp-for="Content" required></textarea>
             </div>
         </div>
+        @*hidden input field which fill the varible of UserId and posted time*@
         <input type="hidden" value='@Context.Session.GetInt32("UserId")' name="UserId" />
         <input type="hidden" value="@DateTime.Now" name="Posted" />
         <br />
+        @*submit button to request action performed*@
         <button type="submit" class="form-control">Add Post</button>
     </form>
-
-
 
 </body>
 
