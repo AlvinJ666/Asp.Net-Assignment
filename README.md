@@ -49,8 +49,8 @@ Execution step:
     * clone project to local, run through Vistual Studio
     * configure database (follow instructions above)
     * install missing dependency before running:<br/>
-     ![image](https://user-images.githubusercontent.com/51864834/122112259-9a536800-cdee-11eb-85fd-d81181622199.png)
-    * run project
+     ![image](https://user-images.githubusercontent.com/51864834/122112259-9a536800-cdee-11eb-85fd-d81181622199.png)<br/>
+    * run project<br/>
     * Have fun to play with it.
 Demo:   
     * Hosting Address: https://ttpost.azurewebsites.net
