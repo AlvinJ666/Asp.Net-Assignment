@@ -31,7 +31,28 @@ Layout:
     - Shared
       - _Layout.cshtml, web view of header which is shared by all other pages above
     - _ViewImports.cshtml, through adding addTagHelper to enable server-side code to participate in creating and rendering HTML elements in Razor files
-
-Hosting Address: https://ttpost.azurewebsites.net
+   * Appsettings.json
+     - appsettings.Development.json
+       - Store configuration settings, may include db connection string(not applied in this project)
+   * Program.cs
+     - the entry Point for application, executes from here.
+   * Startup.cs
+     - configures services and the app's request pipeline
+Database Setup and Connection:
+    - backend db is set up in MS Azure cloud
+      steps to configure db:
+    - login to MS Azure, create a database,
+    - go to query editor, log in to SQL server authentication
+    - copy content of .sql file in this project to the query part and run
+    - copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password
+Execution step:   
+    - clone project to local, run through Vistual Studio
+    - configure database (follow instructions above)
+    - install missing dependency before running:
+    ![image](https://user-images.githubusercontent.com/51864834/122112259-9a536800-cdee-11eb-85fd-d81181622199.png)
+    - run project
+    - Have fun to play with it.
+Demo:   
+    - Hosting Address: https://ttpost.azurewebsites.net
 
 
