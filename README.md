@@ -39,12 +39,12 @@ Layout:
    * Startup.cs
      - configures services and the app's request pipeline
 Database Setup and Connection:
-    * backend db is set up in MS Azure cloud
-      steps to configure db:
-    * login to MS Azure, create a database,
-    * go to query editor, log in to SQL server authentication
-    * copy content of .sql file in this project to the query part and run
-    * copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password
+    * backend db is set up in MS Azure cloud,
+    * steps to configure db:
+        - login to MS Azure, create a database,
+        - go to query editor, log in to SQL server authentication
+        - copy content of .sql file in this project to the query part and run
+        - copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password
 Execution step:   
     * clone project to local, run through Vistual Studio
     * configure database (follow instructions above)
