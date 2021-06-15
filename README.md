@@ -40,22 +40,22 @@ Layout:
      - configures services and the app's request pipeline
 
 Database Setup and Connection:
-    * backend db is set up in MS Azure cloud,
-    * steps to configure db:
-        - login to MS Azure, create a database,
-        - go to query editor, log in to SQL server authentication
-        - copy content of .sql file in this project to the query part and run
-        - copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password
+   * backend db is set up in MS Azure cloud,
+   * steps to configure db:
+      - login to MS Azure, create a database,
+      - go to query editor, log in to SQL server authentication
+      - copy content of .sql file in this project to the query part and run
+      - copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password
 
 Execution step:   
-    * clone project to local, run through Vistual Studio
-    * configure database (follow instructions above)
-    * install missing dependency before running:<br/>
+   * clone project to local, run through Vistual Studio
+   * configure database (follow instructions above)
+   * install missing dependency before running:<br/>
      ![image](https://user-images.githubusercontent.com/51864834/122112259-9a536800-cdee-11eb-85fd-d81181622199.png)<br/>
-    * run project<br/>
-    * Have fun to play with it.
+   * run project<br/>
+   * Have fun to play with it.
 
 Demo:   
-    * Hosting Address: https://ttpost.azurewebsites.net
+   * Hosting Address: https://ttpost.azurewebsites.net
 
 
