@@ -30,6 +30,7 @@ Layout:
       - Search.cshtml, web view page to allow vister to search for blogs based on the partial title/content entered by visiter.
     - Shared
       - _Layout.cshtml, web view of header which is shared by all other pages above
+    - _ViewImports.cshtml, through adding addTagHelper to enable server-side code to participate in creating and rendering HTML elements in Razor files
 
 Hosting Address: https://ttpost.azurewebsites.net
 
