@@ -41,6 +41,8 @@ Layout:
 
 Database Setup and Connection:
    * backend db is set up in MS Azure cloud,
+   * Entity relationship diagram：
+     ![Entity RelationShip Diagram](https://user-images.githubusercontent.com/51864834/122113989-c5d75200-cdf0-11eb-9367-8a07472a2e40.PNG)
    * steps to configure db:
       - login to MS Azure, create a database,
       - go to query editor, log in to SQL server authentication
