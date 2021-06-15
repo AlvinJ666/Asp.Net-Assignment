@@ -1,25 +1,29 @@
-﻿@model IEnumerable<Lab4_Cs.Models.BlogPost>
+@model IEnumerable<Lab4_Cs.Models.BlogPost>
 @using Microsoft.AspNetCore.Http;
+
+@*fill the header*@
 @{
-    //ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@*if has notification, prompt alertion*@
 @if (!string.IsNullOrEmpty(ViewBag.notification))
 {
     <script>alert("@ViewBag.notification");</script>
 }
+@*if there is no model, show a message to indicate no blog posts*@
 @if (Model == null || Model.Count() == 0)
 {
     <p><h4>Currently, there are no blogs to display.</h4></p>
 }
+@*display blogposts if there is blog post*@
 else
-{
-
-
+{   /*loop through models*/
     @foreach (var item in Model)
     {
-        <br></br>
+        <br/>
         <div class="card w-100 p-3 mb-2 bg-light text-dark">
+            @*if current login user is admin, allow edit and delete for each blog*@
             @if (2 == Context.Session.GetInt32("Roleid"))
             {
                 <div class="card-header">
@@ -36,6 +40,7 @@ else
                 </div>
                 <div class="card-footer"><h6>Posted on: @item.Posted</h6></div>
             }
+            @*if current login user is general user, allow read only*@
             else
             {
                 <div class="card-header"><h3><a asp-controller="Home" asp-action="DisplayFullBlogPost" asp-route-id="@item.BlogPostId">@item.Title</a></h3></div>
@@ -47,15 +52,5 @@ else
 
         </div>
     }
-    @***IMPORTANT***********(<a asp-controller="Home" asp-action="EditBlog" asp-route-id="@item.BlogPostId">Edit</a> |
-        <a onclick="return confirm('Make sure to delete?')" asp-controller="Home" asp-action="DeleteBlog" asp-route-id="@item.BlogPostId">Delete</a> )
-
-                        <td>
-                            <a asp-controller="Home" asp-action="EditMovie" asp-route-id="@item.MovieId">Edit</a>&nbsp;&nbsp;
-                        </td>
-                        <td>
-                            <a onclick="return confirm('Make sure to delete?')" asp-controller="Home" asp-action="DeleteMovie" asp-route-id="@item.MovieId">Delete</a>&nbsp;&nbsp;-&nbsp;&nbsp;
-                        </td>*@
-
 }
 <br />
