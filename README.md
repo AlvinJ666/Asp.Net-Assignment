@@ -48,7 +48,8 @@ Database Setup and Connection:
 Execution step:   
     - clone project to local, run through Vistual Studio
     - configure database (follow instructions above)
-    - install missing dependency before running:![image](https://user-images.githubusercontent.com/51864834/122112259-9a536800-cdee-11eb-85fd-d81181622199.png)
+    - install missing dependency before running:
+    - ![image](https://user-images.githubusercontent.com/51864834/122112259-9a536800-cdee-11eb-85fd-d81181622199.png)
     - run project
     - Have fun to play with it.
 Demo:   
