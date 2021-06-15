@@ -9,11 +9,11 @@ Language, Frameworks:
   * Bootstrap
 
 Layout:
-  *wwwroot
+  * wwwroot
     - folder of bootstrap css files, used for page styling
-  *Controllers
+  * Controllers
     - homecontroller with all functions to process request and perform response
-  *Models
+  * Models
     - Assigment1DbContext: A db context class which collects all abset of models
     -
 
