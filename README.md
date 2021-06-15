@@ -44,7 +44,7 @@ Database Setup and Connection:
         - login to MS Azure, create a database,
         - go to query editor, log in to SQL server authentication
         - copy content of .sql file in this project to the query part and run
-        - copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password
+        - copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password<br/>
 Execution step:   
     * clone project to local, run through Vistual Studio
     * configure database (follow instructions above)
