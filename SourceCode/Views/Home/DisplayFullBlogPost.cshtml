@@ -1,4 +1,4 @@
-﻿@model Lab4_Cs.Models.BlogPost
+@model Lab4_Cs.Models.BlogPost
 @using Microsoft.AspNetCore.Http
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,16 +8,17 @@
 <html>
 
 <body>
-
+    @*display blog title*@
     <h3>@Model.Title</h3>
 
     <div class="card">
         <div class="col-sm-12">
             <div class="card-body">
+                @*display author name, email address, posted time, and content*@
                 <h6>
                     Written by: @Model.user.FirstName @Model.user.LastName @Model.user.EmailAddress
                     <br />Posted on: @Model.Posted<br />
-                    </br>Content:</br>
+                    <br/>Content:<br/>
 
                     <b>@Model.Content</b>
 
@@ -48,22 +49,25 @@
 
             </div>
          }*@
-
+        @*display comments*@
         <div class="panel panel-default">
             <div class="panel-heading">Comments</div>
             <ul class="list-group">
+                @*if no comments yet, display a message*@
                 @if (Model.comment.Count == 0)
                 {
-                    <li class="list-group-item">Currently, there is no comment. Be the first to post!</li>
+                    <li class="list-group-item">Currently, there is no comment. Be the first one to comment!</li>
                 }
                 else
                 {
+                    //loop through to display all the comments
                     @foreach (var item in Model.comment)
                     {
 
                         <div class="card">
                             <div class="col-sm-12">
                                 <div class="card-body">
+                                    @*display comment content, commentator's name, email address*@
                                     <b> @item.Content</b><br />
                                     <p>Comment By: @item.user.FirstName @item.user.LastName     <u>@item.user.EmailAddress</u></p>
                                 </div>
@@ -73,13 +77,14 @@
                 }
             </ul>
         </div>
+        @*if not log in, provide link for user to log in*@
         @if (@Context.Session.GetInt32("UserId") == null)
         {
             <div class="page-header">Log In to Comment</div>
             <a asp-controller="Home" asp-action="Login">Log In</a>
         }
-        else
-        {
+        else{
+            //call function AddComment from home controller to perform adding comment, method type is post
             <form method="post" asp-controller="Home" asp-action="AddComment">
                 <input type="hidden" value="@Model.BlogPostId" name="Comment.BlogPostId" />
                 <input type="hidden" value='@Context.Session.GetInt32("UserId")' name="Comment.UserId" />
@@ -88,12 +93,12 @@
                     <div class="col-sm-12">
                         <textarea class="form-control" name="Comment.Content" rows="3" required="required"></textarea>
                     </div>
-                    <br /><button type="submit" class="btn btn-primary">Submit</button>
+                    <br />
+                    @*submit button to request action performed*@
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         }
     </body>
 
 </html>
-
-
