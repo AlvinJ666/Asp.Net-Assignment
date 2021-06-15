@@ -1,4 +1,4 @@
-# Asp.Net-Assignment
+# Asp.Net-Assignment - BlogPost
 A blog post website developing using asp.net core framework in C#
 
 Author: Dongxu Jiang
