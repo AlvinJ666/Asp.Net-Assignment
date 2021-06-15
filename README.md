@@ -37,7 +37,7 @@ Layout:
    * Program.cs
      - the entry Point for application, executes from here.
    * Startup.cs
-     - configures services and the app's request pipeline
+     - configures services and the app's request pipeline<br/>
 Database Setup and Connection:
     * backend db is set up in MS Azure cloud,
     * steps to configure db:
