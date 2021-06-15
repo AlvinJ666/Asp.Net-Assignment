@@ -47,7 +47,7 @@ Database Setup and Connection:
     * copy connection string to "var connection" in Startup.cs, replace {your_password} part with you password
 Execution step:   
     * clone project to local, run through Vistual Studio
-    * configure database (follow instructions above)<br/>
+    * configure database (follow instructions above)
     * install missing dependency before running:<br/>
      ![image](https://user-images.githubusercontent.com/51864834/122112259-9a536800-cdee-11eb-85fd-d81181622199.png)
     * run project
