@@ -57,7 +57,4 @@ Execution step:
    * run project<br/>
    * Have fun to play with it.
 
-Demo:   
-   * Hosting Address: https://ttpost.azurewebsites.net
-
 
